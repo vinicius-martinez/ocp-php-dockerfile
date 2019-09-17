@@ -1,8 +1,3 @@
 FROM registry.access.redhat.com/rhscl/httpd-24-rhel7
 
-RUN echo "<h1>Meu Dockerfile</h1>" > /opt/app-root/src/index.php
-RUN echo "<h1>Meu Dockerfile</h1>" > /opt/rh/httpd24/root/var/www/index.php
-RUN echo "<h1>Meu Dockerfile</h1>" > /var/www/index.php
-
-# CMD ["container-entrypoint", "/usr/libexec/s2i/run"]
-CMD ["httpd", "-D", "FOREGROUND"]
+RUN echo "<h1>Meu Dockerfile</h1>" > /opt/rh/httpd24/root/var/www/html/index.html
